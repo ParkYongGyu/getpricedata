@@ -152,10 +152,10 @@ public class GetData {
 		    };
 		    
 		    queryId = httpclient.execute(httpget, responseHandler).trim();
-		    logger.info( queryId);
+		    //logger.info( queryId);
 		    queryIdURL = URLEncoder.encode(queryId, "UTF-8");
 		    
-		    logger.info( queryIdURL);
+		    //logger.info( queryIdURL);
 		    httpget = null;
 		    responseHandler = null;
 			
@@ -181,7 +181,7 @@ public class GetData {
 		    returnValue = httpclient.execute(httpget, responseHandler);		    
 		    
 		    
-		    logger.info( returnValue);
+		    //logger.info( returnValue);
 		  
 		    sell = new BigDecimal(returnValue.substring(7, 14)).toString();
 		    buy = new BigDecimal(returnValue.substring(14, 21)).toString();
@@ -255,7 +255,7 @@ public class GetData {
 	    dd = cal.get(Calendar.DAY_OF_MONTH);
 	    hh = cal.get(Calendar.HOUR_OF_DAY);
 	    Date date = new Date(priceTime);
-
+/*
 	    logger.info( "sell : " + sell);
 	    logger.info( "buy : " + buy);
 	    logger.info( "high : " + high);
@@ -266,7 +266,7 @@ public class GetData {
 	    logger.info( "hh : " + hh);
 	    logger.info( "priceTime : " + priceTime);
 	    logger.info( "date : " + date);
-	    
+*/	    
 	    
 	    
 		pstmt = conn.prepareStatement(sql);
